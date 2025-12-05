@@ -1,12 +1,6 @@
 package juniorApi.ApiSant.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-
-
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cartoes")
@@ -19,6 +13,7 @@ public class Cartao {
     private String numeroCartao;
     private String cvv;
     private String validade;
+    private String nome;
 
 
     public Cartao() {
@@ -80,5 +75,13 @@ public class Cartao {
 
     public void setValidade(String validade) {
         this.validade = validade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

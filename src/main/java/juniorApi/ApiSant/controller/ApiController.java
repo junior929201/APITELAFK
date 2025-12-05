@@ -22,7 +22,7 @@ public class ApiController {
         this.apiService = apiService;
     }
 
-    @GetMapping("/cpf")
+    @PostMapping("/cpf")
     public Pessoa consultarCPF(@RequestBody Pessoa pessoa) throws Exception {
         // Validação simples de CPF
         pessoaService.salvarPessoa(pessoa);
